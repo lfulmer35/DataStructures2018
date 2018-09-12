@@ -2,12 +2,12 @@
 #all .cpp and .h files
 #at the command prompt
 #make
-#./fulmerproject  (or whatever you call the TARGET)
+#./matrix  (or whatever you call the TARGET)
 
-SOURCES = main.cpp actor.cpp pictures.cpp functions.cpp
+SOURCES = BSTDriver.cpp
 
 ######Change from matrix to (for example hw1) .#######
-TARGET = fulmerproject
+TARGET = BST
 
 #-------Do Not Change below this line-------------
 #Compile with g++

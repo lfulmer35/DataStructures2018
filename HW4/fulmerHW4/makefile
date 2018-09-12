@@ -1,22 +1,24 @@
+#Lucas Fulmer
 #Place this makefile in the same directory as your
 #all .cpp and .h files
 #at the command prompt
 #make
-#./fulmerproject  (or whatever you call the TARGET)
+#./fulmerhw4  (or whatever you call the TARGET)
 
-SOURCES = main.cpp actor.cpp pictures.cpp functions.cpp
+#for use with c++ files
+.SUFFIXES : .cpp
 
-######Change from matrix to (for example hw1) .#######
-TARGET = fulmerproject
-
-#-------Do Not Change below this line-------------
 #Compile with g++
 CC = g++
 
 #use -g for gnu debugger and -std= for c++11 compiling
 CXXFLAGS = -g -std=c++11
 
-OBJS:= ${SOURCES:.cpp=.o}
+######Change to match all .cpp files.  Do not include .h files####
+OBJS = main.o MyVector.o
+
+######Change from matrix to hw1.#######
+TARGET = fulmerhw4
 
 ######Do NOT change this...Tabs Matter!#########
 $(TARGET): $(OBJS)
@@ -30,3 +32,4 @@ $(TARGET): $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(TARGET) core
+

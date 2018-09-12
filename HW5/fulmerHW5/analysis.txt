@@ -1,0 +1,64 @@
+Author: Lucas Fulmer
+
+Assignment: Homework 5
+
+Due Date: March 1, 2018
+
+Description:
+This file is an analysis of the Order of complexity of Data Structures HW5
+assignment(Linked List). It includes the complexity of each individual function as well as
+the overall "Big-O" complexity of the program.
+
+
+Analysis:
+BLUF: The program contains ten (10) functions. The largest complexity being f(n). 
+
+LinkedList() - constructor
+f(1)
+Constant complexity O(1)
+
+~LinkedList() - destructor
+f(1)
+Constant complexity O(1)
+
+insertAtFront()
+f(2) + f(5) + f(5) = f(12)
+Constant complexity O(1)
+
+insertBeforePosition()
+f(n) + f(10)
+Contains a single loop dependent on (n) size
+Linear complexity O(n)
+
+insertAtBack()
+f(1) + f(1) + f(5) + f(5) + f(n) = f(n) + f(12)
+Contains a single loop dependent on (n) size
+Linear complexity O(n)
+
+deleteAtFront()
+f(1) + f(1) + f(1) + f(5) + f(3) = f(11)
+Constant complexity O(1)
+
+deletePosition()
+f(1) + f(1) + f(1) + f(3) + f(3) + f(n) = f(9) + f(n)
+Contains a single loop dependent on (n) size
+Linear complexity O(n)
+
+deleteAtBack()
+f(n+2) + f(5) = f(n) + f(7)
+Contains a single loop dependent on (n) size
+Linear complexity O(n)
+
+clear()
+f(1) + f(1) + f(1) + f(n+3) + f(1) + f(1) = f(n) + f(8)
+Contains a single loop dependent on (n) size
+Linear complexity O(n)
+
+ostream& operator <<(overloading the stream operator)
+f(1) + f(1) + f(n+3) = f(n) + f(5)
+Contains a single loop dependent on (n) size
+Linear complexity O(n)
+
+
+Overall "Big O" Complexity of Program:
+Linear O(n)

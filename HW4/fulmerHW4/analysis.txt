@@ -1,0 +1,50 @@
+Author: Lucas Fulmer
+
+Assignment: Homework 4
+
+Due Date: 22 FEB 2018
+
+Description:
+This file is an analysis of the Order of complexity of Data Structures HW4
+assignment. It includes the complexity of each individual function as well as
+the overall "Big-O" complexity of the program.
+
+
+Analysis:
+BLUF: The program contains seven (7) functions. The largest complexity being f(n). 
+
+MyVector() - constructor
+f(1)
+Constant complexity O(1)
+
+operator[] - overloading the [] operator
+f(1) + f(1) = f(2)
+Constant complexity O(1)
+
+pop_back()
+f(1) + f(1) + f(1) + f(1) + (f(n) + f(1)) + (f(n) + f(1)) = f(2n) + f(6)
+loops are not nested and are both dependent on size (n)
+Linear complexity O(n)
+
+push_back(T value)
+f(1) + f(1) + f(1) + f(1) + f(1) + f(1) + f(1) + f(n) + f(n) = f(2n) + f(7)
+loops are not nested and dependent on size (n)
+Linear complexity O(n)
+
+size()
+f(1)
+Constant complexity O(1)
+
+empty()
+f(1) + f(1) = f(2)
+Constant complexity O(1)
+
+search(T Value)
+f(n) + f(1) + f(1) = f(n) + f(2)
+Linear complexity O(n)
+
+
+
+
+Overall "Big O" Complexity of Program:
+Linear O(n)

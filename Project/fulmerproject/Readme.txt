@@ -1,9 +1,9 @@
 *******************************************************
 *  Name      : Lucas Fulmer          
 *  Student ID: 108963697                
-*  Class     : CSCI 2312           
-*  HW#       : Battleship Project                
-*  Due Date  : April 9, 2017
+*  Class     : CSC 2421           
+*  HW#       : Final Project                
+*  Due Date  : May 2, 2018
 *******************************************************
 
 
@@ -13,48 +13,59 @@
 *******************************************************
 *  Description of the program
 *******************************************************
+This program contains two simple database (Actor/Picture).
+It allows the user to add, search, delete, modify movie
+and actor files. The program uses various ADTs including
+binary search trees and vectors. The databases can be printed
+to a file, if the user desires.
 
-This program creates a Battleship style game using three
-separate classes as well as two derived classes. It allows
-the user to place his/her ships by reading in ship locations
-from a .csv file or by placing them manually. Then the game
-alternates between the player and the computer opponent
-firing torpedoes at each other. The game ends when one
-player has sunk all of the opponents ships.
+Of note, the search functions are all case sensitive.
 
-Completed extra credit part 1: Players must hit each 
-location of a ship in order to sink it.
 
 *******************************************************
 *  Source files
 *******************************************************
 
 Name:  main.cpp
-This file contains declarations and calls the playgame() 
-function which drives the program.
-   
-Name: player.h
-Header file for class Player. 
+This file reads-in the two databases and calls the menu
+function for the selected database.
 
-Name: player.cpp
-Contains function definitions for class Player. This class
-has two derived classes (HumanPlayer and Computer Player).
+Name: functions.h
+Function declarations for menu functions.
 
-Name: WaterVehicle.h
-Header file for class WaterVehicle.
+Name: functions.cpp
+Contains the functions for specific menus. Contains the
+major driver functions for the program.
 
-Name: WaterVehicle.cpp
-Contains member function definitions for the class.
+Name: actor.h
+Header file for the Actor class.
 
-Name: grid.h
-Header file for class Grid.
+Name: actor.cpp
+Contains function definitions for the Actor class.
 
-Name: grid.cpp
-Contains function definitions for class Grid. This class
-creates the 10 x 10 grids used for the battleship board.
+Name: pictures.h
+Header file for Picture class.
 
-Name: ship_placement.csv
-Contains ship starting locations for the user.
+Name: pictures.cpp
+Contains function definitions for the Picture class.
+
+Name: Node.h
+Contains declarations and definitions for the Node class.
+
+Name: BSTree.h
+Header file for binary search tree(BST) class.
+
+Name: BSTree.hpp
+Contains function implementation for the BSTree class.
+
+Name: actor-actress.csv
+File containing actor/actress entries. This file is read-
+in to the actor database.
+
+Name: Pictures.csv
+File containing picture entries. This file is read-in
+to the picture database.
+
 
 *******************************************************
 *  Circumstances of programs
@@ -75,15 +86,21 @@ compiled, run, and tested on cse grid.
        % unzip [fulmerproject]
 
    Now you should see a directory named homework with the files:
-        main.cpp
-       	player.h
-	player.cpp
-	watervehicle.h
-	WaterVehicle.cpp
-	grid.h
-	grid.cpp
+    main.cpp
+	functions.h
+	functions.cpp
+	Node.h
+	actor.h
+	actor.cpp
+	pictures.h
+	pictures.cpp
+	BSTree.h
+	BSTree.hpp
+	actor-actress.csv
+	pictures.csv
 	makefile
-        Readme.txt
+	fulmerproject design document
+    Readme.txt
 
 2. Build the program.
 
